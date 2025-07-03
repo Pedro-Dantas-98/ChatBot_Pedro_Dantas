@@ -23,21 +23,22 @@ def obter_resposta(texto: str) -> str:
 
     respostas = {
         ('olá', 'boa tarde', 'bom dia', 'boa noite'): 'Olá, tudo bem?',
-        ('como estás'): 'Estou bem, obrigado!',
+        ('como estás', 'tudo bem', 'como vai tudo'): 'Estou bem, obrigado!',
         ('bye', 'adeus', 'tchau', 'até logo'): 'Gostei de falar contigo! Até breve...',
-        ('como te chamas', 'qual é o teu nome', 'quem és tu'): 'O meu nome é ChatBot!',
+        ('como te chamas', 'qual é o teu nome', 'quem és tu', 'nome'): 'O meu nome é ChatBot!',
         ('horas', 'tens horas', 'que horas são', 'dá-me as horas'): f'São: {datetime.now():%H:%M} horas',
         ('dia', 'hoje', 'que dia é hoje', 'data'): f'Hoje é dia: {datetime.now():%d-%m-%Y}',
-        ('tempo', 'lá fora', 'está bom tempo?', 'está a chover?'): 'Está um belo dia de sol!',
+        ('tempo', 'lá fora', 'está bom tempo', 'está a chover'): 'Está um belo dia de sol!',
         ('piada', 'anedota', 'algo engraçado', 'rir'):  'O que diz um tomate para o outro? \n ... \n Tu matas-me!',
         ('jogo', 'vamos jogar', 'brincar', 'passatempo', 'estou aborrecido'): 'OK! Que tal uma adivinha? O que é que quanto mais seca, mais molhada fica?',
-        ('toalha', 'é uma toalha?'): 'Acertaste! Muito bem!',
+        ('toalha', 'uma toalha', 'é uma toalha'): 'Acertaste! Muito bem!',
         ('não sei', 'pista', 'dica', 'dá-me uma pista'): 'Pista: É uma coisa que encontras na casa de banho.',
         ('facto', 'algo interessante', 'curiosidade'): 'O mais longo vôo registado de uma galinha durou 13 segundos.',
-        ('filosofia', 'pensamento', 'em que estás a pensar?', 'diz alguma coisa'): 'O senso comum é o menos comum de todos os sensos.',
+        ('filosofia', 'pensamento', 'em que estás a pensar', 'diz alguma coisa'): 'O senso comum é o menos comum de todos os sensos.',
         ('contar', 'contagem', 'números', 'escondidas'): 'Ok! 1... 2... 3... 4... 5... 6... 7... 8... 9... 10...',
         ('palavra do dia', 'dicionário', 'vocabulário'): 'A palavra do dia é: Codícia. Um apetite intenso por riquezas, bens materiais ou dinheiro.',
-        ('programar', 'sabes programar', 'python', 'código'): 'Eu não consigo ajudar-te a programar. Mas eu acredito que vais conseguir!'
+        ('programar', 'sabes programar', 'python', 'código'): 'Eu não consigo ajudar-te a programar. Mas eu acredito que vais conseguir!',
+        ('filmes', 'filme', 'recomendação', 'quero ver um filme'): 'Filmes no Top 5 do IMDB: \n - Os Condenados de Shawshank \n - O Padrinho \n - O Cavaleiro das Trevas \n - O Padrinho: Parte 2 \n - 12 Homens em Fúria',
     }
 
     for chave, resposta in respostas.items():
